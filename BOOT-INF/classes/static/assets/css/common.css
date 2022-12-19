@@ -1,0 +1,235 @@
+/* 폰트적용 */
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap');
+
+html {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+
+/* 노말라이즈 */
+body, ul, li{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+/* 노말라이즈 끝 */
+/* 라이브러리 */
+
+.con{
+    margin-left:auto;
+    margin-right:auto;
+}
+.inline-block{
+    display:inline-block;
+}
+.block{
+    display:block;
+}
+.text-align-center{
+    text-align:center;
+}
+.cell{
+    float:left;
+}
+.cell-right{
+    float:right;
+}
+.row::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+
+/* 라이브러리 끝 */
+
+/* 커스텀 시작 */
+/* 메뉴바 시작 */
+
+.side-bar{
+    width:250px;
+    height:100vh;
+    background-color: #111628;
+    position:fixed;
+    top:0;
+    left: 0;
+    color: #8991AC;
+    font-family: 'Karla', "Noto Sans KR", sans-serif;
+    font-size: 1rem;
+}
+
+.side-bar > .logo-box{
+    box-sizing: border-box;
+}
+
+.side-bar > .logo-box > img{
+    width:150px;
+    padding:15px;
+}
+
+.side-bar > ul {
+    padding-left: 15px;
+}
+
+.side-bar > ul > .menu{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 0.8rem;
+}
+.side-bar > ul > li > a {
+    display: block;
+    padding:0 10px;
+    width:calc(100% - 25px);
+    border-radius: 13px;
+    margin-left: -5px;
+    margin-top: 15px;
+    transition: background-color .3s, box-shadow .3s;
+    position:relative;
+    line-height: 35px;
+}
+.side-bar > ul > li > a.active{
+    background-color: #19203A;
+    box-shadow: inset 0 0 10px #0F1323 15%;
+}
+.side-bar > ul > li > a:active{
+    background-color: #080B17;
+    box-shadow: inset 0 0 10px #0F1323 15%;
+}
+.side-bar > ul > li > a > img{
+    padding-right:15px;
+    vertical-align: middle;
+}
+
+.side-bar > ul > li.active-page > a{
+    background-color: #080B17;
+    box-shadow: inset 0 0 10px #0F1323 15%;
+    color:#EA543F;
+}
+.side-bar > ul > li > ul{
+    width:calc(100% - 5px);
+    margin-left: -5px;
+    margin-top: 5px;
+    background-color: #19203A;
+    box-shadow: inset 0 0 10px #0F1323 15%;
+    border-radius: 13px;
+    overflow: hidden;
+}
+.side-bar > ul > li.active-page > ul{
+    background-color: #080B17;
+}
+.side-bar > ul > li > ul > li{
+    transition:color .3s;
+}
+.side-bar > ul > li > ul > li:hover{
+    color:#6A4F4B;
+}
+.side-bar > ul > li > ul > li:hover > a::after{
+    background-color:#6A4F4B;
+}
+.side-bar > ul > li.active-page > ul > li.active-page-in{
+    color:#A33527;
+}
+.side-bar > ul > li > ul > li:first-child{
+    padding-top: 20px;
+}
+.side-bar > ul > li > ul > li:last-child{
+    padding-bottom: 20px;
+}
+.side-bar > ul > li > ul > li > a { 
+    position:relative;
+    display: block;
+    padding:10px 0px 10px 30px;
+    width: 100%;
+}
+.side-bar > ul > li > ul > li > a::after{
+    content: "";
+    position:absolute;
+    top:50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width:4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #5D688B;
+    transition:background-color .3s;
+
+}
+.side-bar > ul > li.active-page > ul > li.active-page-in > a::after {
+    background-color: #A33527;
+}
+
+
+.side-bar > ul > li > a:not(:only-child)::after{
+    content: url("../source/arrow1.png");
+    position:absolute;
+    display: block;
+    right:15px;
+    top:50%;
+    transform: translateY(-50%);
+    transition: transform .3s;
+    height: 24px;
+    fill:rgb(148, 67, 67);
+}
+.side-bar > ul > li.active-page > a:not(:only-child)::after{
+    content: url("../source/arrow.png");
+
+}
+.side-bar > ul > li > a.active:not(:only-child)::after{
+    transform: translateY(-50%) rotate(180deg);
+}
+.side-bar > ul > li.active-page > a:not(:only-child)::after{
+    transform: translateY(-50%)  rotate(180deg)
+}
+.side-bar > ul > li.active-page > a.active:not(:only-child)::after{
+    transform: translateY(-50%) rotate(0deg);
+
+}
+
+/* 메뉴바 끝 */
+/* page 시작 */
+.page{
+    margin-left: 250px;
+}
+.page-name-box{
+    height: 60px;
+    border-bottom:0px solid #D6D8E1;
+    color:#45474E;
+    font-family: 'Karla', "Noto Sans KR", sans-serif;
+}
+.page-name-box > .page-name {
+    display:inline-block;
+    line-height: 60px;
+    padding-left: 30px;
+    font-weight: 600;
+}
+.page-name-box > .page-path {
+    padding-left: 10px;
+    color:#5C5E63;
+}
+
+.page-name-box.dashboard{
+    padding-left: 10px;
+    color:#8991AC;
+    background-color: #050914;
+}
+.page-name-box > .language {
+    line-height: 60px;
+    padding-right: 20px;
+    font-weight: 600;
+    color:#A4A8B5;
+}
+.page-name-box > .language > a{
+    padding:0 10px;
+}
+.page-name-box.dashboard > .language {
+    color:#A33527;
+}
+/* page 끝 */
+
+/* 커스텀끝 */

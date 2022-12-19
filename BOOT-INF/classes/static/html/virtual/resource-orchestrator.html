@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompactEdge</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <link rel="stylesheet" href="/assets/css/common.css">
+        
+    <link rel="stylesheet" href="/assets/css/index.css">
+    
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+
+    	Main.LoadMenu("virtual", "orchestrator");
+    	
+    	$(".page-name-box").attr("style", "display:none");
+    	
+    	$("#in_frame").attr("src", "http://zento.co.kr:9203/portal/orchestrator?date=1639377039972");
+    });
+    
+    </script>
+</head>
+<body>
+    <div class="side-bar">
+        <a href="/index.html" class="logo-box"><img src="/assets/source/logo.png" alt=""></a>
+        <ul id="ul_menu">
+            
+        </ul>
+    </div>
+    <div class="page">
+        <div class="page-name-box row" style="display: none;">
+            <span class="page-name"><span></span>Resource</span><span class="page-path"></span>
+            <div class="language cell-right"><a href="#">En</a>|<a href="./resource-kr.html">Kr</a></div>
+            
+        </div>
+        <div class="body-container">
+        	<iframe id="in_frame"></iframe>
+        	
+        </div>
+    </div>
+</body>
+</html>

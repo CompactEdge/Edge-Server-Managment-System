@@ -1,0 +1,144 @@
+body{
+    background-color: #F4F5F5;
+}
+
+.login-box{
+    margin-left: auto;
+    margin-right: auto;
+    width:680px;
+    height: 780px;
+    margin-top: 60px;
+    background-color: #ffffff;
+    border-radius: 17px;
+    box-shadow: 0px 4px 15px #C0C0C1 25%;
+}
+
+.login-box > .logo{
+    width:200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 150px;
+    padding-bottom: 20px;
+}
+.login-box > .logo > img{
+    display: block;
+    width:100%;
+}
+.login-box > form{
+    padding:0 90px;
+    color:#888888;
+
+}
+.login-box > form > #loginId {
+    width:100%;
+    border:1px solid #DDDDDD;
+    height:50px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding:0 20px;
+    margin-bottom: 10px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1rem;
+    color:#888888;
+}
+.login-box > form > #loginPw {
+    width:100%;
+    border:1px solid #DDDDDD;
+    height:50px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding:0 20px;
+    margin-bottom: 10px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1rem;
+    color:#888888;
+}
+
+.login-box > form > .keep-login-box > .keep-login{
+    display:inline-block;
+    position:relative;
+    padding:0px;
+    border:1px solid #DDDDDD;
+    border-radius: 4px;
+    overflow:hidden;
+    box-sizing: border-box;
+    margin-right: 5px;
+    margin-bottom: 20px;
+
+}
+.login-box > form > .keep-login-box > .keep-login > #keepLogin{
+    margin:0;
+    padding:0;
+    display:block;
+    width:20px;
+    height: 20px;
+    position:relative;
+    opacity:0;
+    z-index:1;
+}
+
+.login-box > form > .keep-login-box > .keep-login > #keepLogin + span {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    content:url('../source/check.png');
+
+}
+
+.login-box > form > .keep-login-box > .keep-login > #keepLogin + span::after{
+    display:none;
+}
+.login-box > form > .keep-login-box > .keep-login > #keepLogin:checked + span{
+    
+  background-color:#F25843;
+}
+.login-box > form > .keep-login-box > .keep-login > #keepLogin:checked + span::after{
+    display:block;
+}
+.login-box > form > .keep-login-box > .keep-text > span{
+    display: block;
+    line-height: 20px;
+}
+
+.login-box > form > .btn_login{
+    font-family: "Noto Sans KR", sans-serif;
+    display: block;
+    width:100%;
+    height: 50px;
+    background-color: #F25843;
+    border:none;
+    font-weight: 500;
+    font-size: 1rem;
+    color:white;
+    border-radius: 3px;
+}
+
+
+.login-box > form > .find{
+    display:block;
+    text-align: center;
+    padding-top:20px;
+
+}
+.login-box > form > .find > a{
+    padding:0 10px;
+}
+.login-box > form > .language{
+    display: block;
+    text-align: center;
+    padding-top:140px;
+    color:#BCBEC5;
+}
+.login-box > form > .language > a{
+    padding: 10px;
+    transition:color .3s;
+    font-weight: 700;
+}
+.login-box > form > .language > a:hover{
+    color:#F25843;
+}

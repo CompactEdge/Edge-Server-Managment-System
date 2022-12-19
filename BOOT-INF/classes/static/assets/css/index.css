@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body{
+	height: 100vh;
+    overflow: hidden;
+}
+
+.page,
+.body-container{
+	height: 100%;
+}
+
+.body-container #in_frame{
+   	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 250px);
+    border: 0;
+    height: 100%;
+    margin-left: 250px;
+}

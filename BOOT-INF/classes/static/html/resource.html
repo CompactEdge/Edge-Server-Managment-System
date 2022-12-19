@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompactEdge</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.15.1-web/css/fontawesome.min.css">
+        
+    <link rel="stylesheet" href="/assets/css/index.css">
+    
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+    	
+    	$(".page-name-box").attr("style", "display:none");
+    	
+    	$("#in_frame").attr("src", "http://61.38.36.234:32002/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&refresh=10s&kiosk=tv");
+    });
+    
+    </script>
+</head>
+<body>
+    <div class="side-bar">
+        <a href="/index.html" class="logo-box"><img src="/assets/source/logo.png" alt=""></a>
+        <ul>
+            <div class="menu">Menu</div>
+                <li><a href="/index.html"><img src="/assets/source/EdgeService1.png" alt="" ><span>Dashboard</span></a>
+                </li>
+                <li><a href="#"><img src="/assets/source/StorageModule1.png" alt=""><span>Storage Module</span></a>
+                    <ul>
+                        <li><a href="./storage-monitoring.html">Storage Monitoring</a></li>
+                        <li><a href="./nvme-storage.html">NVMe Storage</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="/assets/source/Cluster1.png" alt="" ><span>Cluster</span></a>
+                    <ul>
+                        <li><a href="./cluster-status.html">Cluster status</a></li>
+                        <li><a href="./service-status.html">Service Status</a></li>
+                        <li><a href="./container-distribution.html">Container distribution</a></li>
+                        <li><a href="./external-cloud-connection.html">External Cloud Connection</a></li>
+                    </ul>
+                </li>                
+                <li class="active-page"><a href="#"><img src="/assets/source/Resource.png" alt=""><span>Virtual Resource</span></a>
+                	<ul>
+                        <li><a href="./cluster-status-kr.html">Orchestration</a></li>
+                        <li><a href="./service-status-kr.html">VIM</a></li>
+                    </ul>
+                </li>
+                <li class="active-page"><a href="#"><img src="/assets/source/Resource.png" alt=""><span>Resource</span></a></li>
+                <li><a href="#"><img src="/assets/source/EdgeService1.png" alt=""><span>Edge Service</span></a>
+                    <ul>
+                        <li><a href="./service-distribution.html">Service distribution</a></li>
+                        <li><a href="./big-crawler.html">Big Crawler</a></li>
+                        <li><a href="./collab-offloading.html">Collab Offloading</a></li>
+                    </ul>
+                </li>
+        </ul>
+    </div>
+    <div class="page">
+        <div class="page-name-box row" style="display: none;">
+            <span class="page-name"><span></span>Resource</span><span class="page-path"></span>
+            <div class="language cell-right"><a href="#">En</a>|<a href="./resource-kr.html">Kr</a></div>
+            
+        </div>
+        <div class="body-container">
+        	<iframe id="in_frame"></iframe>
+        	
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompactEdge</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <link rel="stylesheet" href="/assets/css/common.css">
+        
+    <link rel="stylesheet" href="/assets/css/index.css">
+    
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+
+    	Main.LoadMenu("cluster", "node");
+    	
+    	$(".page-name-box").attr("style", "display:none");
+    	
+    	$("#in_frame").attr("src", "");
+    });
+    
+    </script>
+</head>
+<body>
+    <div class="side-bar">
+        <a href="/index.html" class="logo-box"><img src="/assets/source/logo.png" alt=""></a>
+        
+        <ul id="ul_menu">
+            
+        </ul>
+
+    </div>
+    <div class="page">
+        <div class="page-name-box row">
+            <span class="page-name"><span></span>External</span><span class="page-path">/ Azure</span>
+            <div class="language cell-right"><a href="#">En</a>|<a href="./big-crawler-kr.html">Kr</a></div>
+            
+        </div>
+        <div class="body-container">
+        	<iframe id="in_frame"></iframe>
+        	
+        </div>
+    </div>
+</body>
+</html>
